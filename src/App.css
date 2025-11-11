@@ -1,5 +1,5 @@
 /* =========================================================
-   🎮 TIC TAC TOE - STIL MODERN GLASSMORPHISM (FĂRĂ FADE-IN)
+   🎮 TIC TAC TOE - STIL MODERN GLASSMORPHISM (CU FADE-IN)
    ========================================================= */
 
 /* ======= RESET ======= */
@@ -19,6 +19,22 @@ body {
   background-size: 300% 300%;
   animation: bgPulse 15s ease-in-out infinite;
   color: #222;
+
+  /* 🔹 ANIMAȚIE FADE-IN LA ÎNCĂRCARE */
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInPage 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes bgPulse {
